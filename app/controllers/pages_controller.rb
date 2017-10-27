@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user!
   def index
   end
 
@@ -6,14 +7,16 @@ class PagesController < ApplicationController
   end
 
   def profile
+    if params[:id].present?
       @username = params[:id]
-      @posts = Post.all
+    else
+      render :index
+    end
   end
 
   def explore
   end
 
 private
-def params
-end
+
 end

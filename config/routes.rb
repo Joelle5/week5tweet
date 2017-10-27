@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     root 'pages#index'
   end
 
+  resources :posts
+
   get 'profile', to: 'users#show'
 
   get '/index' =>'pages#index'

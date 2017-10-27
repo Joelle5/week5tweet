@@ -17,11 +17,10 @@
  @import "bootstrap";
 
  body {
-   background-color: #7EBDC2;
+   background-image: url(morning.jpg);
+   background-size: cover;
  }
- .index-jum {
-   background-image: url("/assets/tag.jpg");
- }
+
  .navbar {
    background-color: #EFE6DD;
  }
