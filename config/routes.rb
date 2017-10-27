@@ -1,15 +1,21 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-        sessions: 'users/sessions'
-      }
+  devise_for :users
 
-  root 'pages#index'
+  authenticated :user do
+    root to: "pages#profile"
+  end
+
+  unauthenticated :user do
+    root 'pages#index'
+  end
+
+  get 'profile', to: 'users#show'
 
   get '/index' =>'pages#index'
 
   get '/home' => 'pages#home'
 #get 'pages/home'
-  get '/profile' => 'pages#profile'
+  get '/user/:id' => 'pages#profile'
 
   get '/explore' => 'pages#explore'
 

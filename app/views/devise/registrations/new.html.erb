@@ -1,10 +1,14 @@
-<h2>Sign up</h2>
 
+<div class="container-fluid">
+<div class="card sign-up">
+  <img src="/assets/tag.jpg" style="height:100px">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="card-body form-group">
   <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :full_name, required: true %>
+  <h4 class="card-title">Sign In</h4>
+    <div class="form-inputs card-text">
+    <%= f.input :full_name, required: true, :class=>'form-control form-control-lg' %>
+    <%= f.input :username, required: true %>
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>
@@ -14,5 +18,7 @@
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
-
+</div>
 <%= render "devise/shared/links" %>
+</div>
+</div>
