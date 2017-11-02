@@ -5,7 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'devise'
+#Authentication with devise
+gem 'factory_bot'
 #jQuery
 gem 'jquery-rails'
 #simple_form for
@@ -40,6 +42,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  #shoulda-matchers
+  gem 'shoulda-matchers', '~> 3.1'
   #rspec-rails
    gem 'rspec-rails', '~> 3.6'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -50,6 +54,8 @@ group :development, :test do
 end
 
 group :development do
+  #shoulda-matchers
+  gem 'shoulda-matchers', '~> 3.1'
   #rspec-rails
    gem 'rspec-rails', '~> 3.6'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

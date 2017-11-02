@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is Twitter clone using Ruby on Rails https://twit-week5.herokuapp.com.
 
 Things you may want to cover:
 
-* Ruby version
+Ruby version - 2.4.1
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Getting Started
+  git clone https://github.com/Joelle5/week5tweet.git
+  cd week5tweet
+  bundle
+  rake db:migrate
+  rails s
