@@ -1,13 +1,30 @@
 Rails.application.routes.draw do
-  root 'pages#index'
+  devise_for :users
 
-  get '/index' =>'pages#index'
+  #authenticated :user do
+    #root to: "pages#home"
+  #end
 
-  get '/home' => 'pages#home'
+  #unauthenticated :user do
+    #root 'pages#index'
+  #end
+
+  resources :posts
+
+  root 'posts#index'
+
+  #get 'profile', to: 'users#show'
+
+  #get '/index' =>'pages#index'
+
+  #get '/home' => 'pages#home'
 #get 'pages/home'
-  get '/profile' => 'pages#profile'
+  #get '/user/:id' => 'pages#profile'
+  #get '/explore' => 'pages#explore'
+  #get '/posts/new' => 'pages#profile'
 
-  get '/explore' => 'pages#explore'
+
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

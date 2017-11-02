@@ -1,0 +1,9 @@
+<h1>Edit</h1>
+  <%= simple_form_for @post, url: post_path, method: :put do |f| %>
+    <%= f.input :content, label: false %>
+    <%= f.button :submit %>
+  <% end %>
+  <br>
+  <%= link_to 'Profile', posts_path, method: :get %>
+  <br>
+  <%= link_to 'Home', root_path, method: :get %>

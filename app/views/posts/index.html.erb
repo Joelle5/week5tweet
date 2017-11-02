@@ -1,8 +1,9 @@
 <div class="container">
-  <div class="jumbotron jumbotron-fluid" id="post-create">
-    <h1 class="display-3"><%= current_user.username %></h1>
-
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  <div class="jumbotron jumbotron-fluid" id="post-create" style="padding:10px;">
+    <div class="container">
+    <h3>Hello! <%= current_user.username %></h3>
+    <%= render partial: 'new' %>
+  </div>
   </div>
 </div>
 <div class="container">
@@ -24,10 +25,21 @@
 
       <div class="card">
         <div class="card-header">
-          <p>tweets</p>
+          <p></p>
         </div>
-        <div class="card-body">
 
+        <div class="card-body">
+          <table>
+            <% @posts.each do |post| %>
+            <tbody>
+
+            <td class="list-group-item list-item", id="post-c">
+            <%= post.content %></td><td>&#x268C;</td>
+            <td><%= button_to 'O', edit_post_path(post), method: :get, :class => "btn btn-secondary btn-circle" %></td>
+            <td><%= button_to 'X', post_path(post), method: :delete, remote: true, :class => "btn btn-secondary btn-circle", data: { confirm: 'Are you sure you want to delete?' } %></td>
+            </tbody>
+            <% end %>
+        </table>
         </div>
 
       </div>
