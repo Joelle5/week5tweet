@@ -34,7 +34,7 @@
             <tbody>
 
             <td class="list-group-item list-item", id="post-c">
-            <%= post.content %></td><td> "" </td>
+            <%= post.content %></td><td>&#x268C;</td>
             <td><%= button_to 'O', edit_post_path(post), method: :get, :class => "btn btn-secondary btn-circle" %></td>
             <td><%= button_to 'X', post_path(post), method: :delete, remote: true, :class => "btn btn-secondary btn-circle", data: { confirm: 'Are you sure you want to delete?' } %></td>
             </tbody>
