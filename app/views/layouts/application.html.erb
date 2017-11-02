@@ -11,9 +11,11 @@
   <body>
   <%= render '/layouts/nav' %>
   <div class="container">
+    <span class="notice"><%= notice %></span>
+    <span class="alert"><%= alert %></span>
   <!-- Content here -->
   <%= yield %>
   </div>
-    
+
   </body>
 </html>

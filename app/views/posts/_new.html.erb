@@ -1,0 +1,6 @@
+
+<%= simple_form_for @post, url: posts_path, html: { id: 'post-create', class: 'form-control' } do |f| %>
+<%= f.input_field :content, label: false, class: 'form-control'%>
+<br>
+<%= f.button :submit, 'Post', class: 'btn btn-outline-success' %>
+<% end %>

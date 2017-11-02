@@ -15,3 +15,24 @@
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
+
+ body {
+   background-image: url(morning.jpg);
+   background-size: cover;
+ }
+
+ .navbar {
+   background-color: #EFE6DD;
+ }
+ .nav-logout {
+   align-content: center;
+ }
+ .btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 15px;
+}
