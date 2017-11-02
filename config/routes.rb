@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   #get '/index' =>'pages#index'
 
   #get '/home' => 'pages#home'
-#get 'pages/home'
+  #get 'pages/home'
   #get '/user/:id' => 'pages#profile'
   #get '/explore' => 'pages#explore'
   #get '/posts/new' => 'pages#profile'
